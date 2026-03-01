@@ -47,7 +47,7 @@ export function Team() {
   ]
 
   return (
-    <div className="relative py-20 bg-background w-full" style={{ 
+    <div className="relative py-12 sm:py-16 md:py-20 bg-background w-full" style={{ 
       overflow: 'visible', 
       height: 'auto', 
       minHeight: '0', 
@@ -62,7 +62,7 @@ export function Team() {
       <div className="absolute -top-16 right-12 h-40 w-40 rounded-full bg-accent-purple/20 blur-3xl pointer-events-none" />
       <div className="absolute bottom-12 left-10 h-36 w-36 rounded-full bg-accent-emerald/20 blur-3xl pointer-events-none" />
       
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12" style={{ 
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12" style={{ 
         overflow: 'visible', 
         height: 'auto', 
         minHeight: '0', 
@@ -79,19 +79,19 @@ export function Team() {
             <div className="w-3 h-3 rounded-full animate-pulse" style={{ backgroundColor: 'var(--accent-purple)' }} />
           </div>
           
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8 text-foreground">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 sm:mb-8 text-foreground">
             <span className="block mb-2">The Creative</span>
             <span className="block" style={{ color: 'var(--accent-orange)' }}>MINDS</span>
           </h2>
           
-          <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
             Passionate storytellers & digital craftsmen
           </p>
         </div>
 
         {/* Team Cards */}
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {teamMembers.map((member) => (
               <div
                 key={member.name}
@@ -114,10 +114,10 @@ export function Team() {
                   <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2" style={{ borderColor: 'var(--accent-orange)' }} />
                   <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2" style={{ borderColor: 'var(--accent-orange)' }} />
                   
-                  <div className="p-6 text-center flex flex-col h-full">
+                  <div className="p-4 sm:p-6 text-center flex flex-col h-full">
                     {/* Anime Doodle Photo */}
                     <div
-                      className="relative mb-5 mx-auto w-40 h-40 rounded-lg overflow-hidden"
+                      className="relative mb-4 sm:mb-5 mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-lg overflow-hidden"
                       style={{
                         border: '4px solid var(--accent-orange)',
                         boxShadow: '0 0 20px rgba(212, 165, 116, 0.3)'
@@ -143,7 +143,7 @@ export function Team() {
                     </div>
 
                     {/* Name & Role */}
-                    <h3 className="font-black text-xl text-foreground mb-1" style={{ fontFamily: 'serif' }}>
+                    <h3 className="font-black text-lg sm:text-xl text-foreground mb-1" style={{ fontFamily: 'serif' }}>
                       {member.name}
                     </h3>
                     <div className="text-sm font-bold mb-4 tracking-widest uppercase" style={{ color: 'var(--accent-orange)' }}>

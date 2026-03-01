@@ -57,7 +57,7 @@ export function About() {
   }, [])
 
   return (
-    <section id="about" className="relative py-16 bg-background overflow-hidden">
+    <section id="about" className="relative py-10 sm:py-14 md:py-16 bg-background overflow-hidden">
       
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
@@ -72,7 +72,7 @@ export function About() {
       <div className="absolute -top-24 right-10 h-40 w-40 rounded-full bg-accent-purple/20 blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-8 h-32 w-32 rounded-full bg-accent-blue/20 blur-3xl pointer-events-none" />
 
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
         
         {/* Header */}
         <div className="text-center mb-12">
@@ -84,11 +84,11 @@ export function About() {
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
           
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-foreground">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-4 sm:mb-6 text-foreground">
             Our Process
           </h2>
           
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-6 sm:mb-8 px-2 sm:px-0">
             Our process blends strategy, storytelling, and production craft to move from first
             insight to final delivery. Every step is built to elevate your brand and create work
             that looks stunning and performs in the real world.
@@ -96,7 +96,7 @@ export function About() {
         </div>
 
         {/* Process Steps Container */}
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto w-full min-w-0 overflow-hidden">
           
           {/* Process Strip */}
           <div className="relative bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 rounded-xl overflow-hidden"
@@ -135,13 +135,13 @@ export function About() {
             </div>
 
             {/* Process Frames */}
-            <div className="relative py-6 px-8 overflow-hidden h-64 max-w-full">
+            <div className="relative py-4 sm:py-6 px-4 sm:px-8 overflow-x-auto overflow-y-hidden h-56 sm:h-64 max-w-full touch-pan-x [-webkit-overflow-scrolling:touch]">
               <div className={`flex transition-transform duration-1000 ease-in-out ${
                 animationStarted ? 'film-scroll-animation' : ''
-              }`} style={{ width: 'max-content', gap: '32px' }}>
+              }`} style={{ width: 'max-content', gap: 'clamp(16px, 4vw, 32px)' }}>
                 
                 {/* Start frame */}
-                <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center" 
+                <div className="flex-shrink-0 w-64 sm:w-80 h-44 sm:h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center" 
                      style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
                   <div className="text-gray-400 font-mono tracking-wider">● START</div>
                 </div>
@@ -150,19 +150,19 @@ export function About() {
                 {processSteps.map((step, index) => (
                   <div
                     key={step.number}
-                    className="flex-shrink-0 w-80 h-52 bg-background rounded-lg border-4 border-accent-purple"
+                    className="flex-shrink-0 w-64 sm:w-80 h-44 sm:h-52 bg-background rounded-lg border-4 border-accent-purple"
                     style={{
                       boxShadow: '0 8px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
                     }}
                   >
-                    <div className="relative h-full p-6 flex flex-col justify-between">
+                    <div className="relative h-full p-4 sm:p-6 flex flex-col justify-between">
                       <div className="absolute -top-4 -left-4 w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center font-black z-10 border-3 border-white text-lg"
                            style={{ boxShadow: '0 6px 12px rgba(0,0,0,0.4)' }}>
                         {step.number}
                       </div>
                       
                       <div className="opacity-100">
-                        <h3 className="font-black text-xl leading-tight mb-4 text-foreground">
+                        <h3 className="font-black text-lg sm:text-xl leading-tight mb-2 sm:mb-4 text-foreground">
                           {step.title}
                         </h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
@@ -179,7 +179,7 @@ export function About() {
                 ))}
                 
                 {/* End frame */}
-                <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center"
+                <div className="flex-shrink-0 w-64 sm:w-80 h-44 sm:h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center"
                      style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
                   <div className="text-gray-400 font-mono tracking-wider">● DELIVERY</div>
                 </div>

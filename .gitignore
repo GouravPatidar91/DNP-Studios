@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Long Cursor/workspace image paths (Windows path length limit)
+public/c__Users_freedom_*
+**/c__Users_freedom_*
