@@ -38,7 +38,7 @@ export function Footer() {
             <div className="flex items-center gap-4 sm:gap-6">
               {/* Instagram - placeholder until profile URL is set */}
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/dynamic_new_production?igsh=MWxvdmk1aHdweGc3YQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center p-3 rounded-lg hover:scale-110 gentle-animation cursor-pointer touch-manipulation min-h-[44px] min-w-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-offset-2 focus-visible:ring-offset-foreground"
